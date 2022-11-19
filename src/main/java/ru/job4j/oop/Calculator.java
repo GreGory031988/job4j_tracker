@@ -8,7 +8,7 @@ public class Calculator {
     }
 
     public static int minus(int z) {
-        return x - z;
+        return z - x;
     }
 
     public int multiply(int a) {
@@ -16,7 +16,7 @@ public class Calculator {
     }
 
     public int divide(int w) {
-        return x / w;
+        return w / x;
     }
 
     public int sumAllOperation(int s) {
@@ -26,14 +26,14 @@ public class Calculator {
     public static void main(String[] args) {
         int result = sum(10);
         System.out.println(result);
-        int result1 = minus(2);
+        int result1 = minus(10);
         System.out.println(result1);
         Calculator calculator = new Calculator();
         int rsl = calculator.multiply(5);
-        int rsl1 = calculator.divide(1);
+        int rsl1 = calculator.divide(35);
         System.out.println(rsl);
         System.out.println(rsl1);
-        int rsl2 = calculator.sumAllOperation(10);
+        int rsl2 = calculator.sumAllOperation(25);
         System.out.println(rsl2);
     }
 }

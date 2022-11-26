@@ -6,6 +6,7 @@ public class College {
         student.setFullName("Kashin Grigorii Alesandrovich");
         student.setNumberGroup("PS-112");
         student.setReceipt("01 августа 2006 года");
-        System.out.println(student.getFullName() + "\n" + student.getNumberGroup() + "\n" + student.getReceipt());
+        System.out.println(student.getFullName() + System.lineSeparator()
+                + student.getNumberGroup() + System.lineSeparator() + student.getReceipt());
     }
 }

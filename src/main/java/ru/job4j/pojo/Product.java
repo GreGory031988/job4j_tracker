@@ -27,7 +27,6 @@ public class Product {
         this.count = count;
     }
 
-    @SuppressWarnings("checkstyle:NeedBraces")
     @Override
     public boolean equals(Object o) {
         if (this == o) {

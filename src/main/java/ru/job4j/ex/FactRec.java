@@ -5,13 +5,11 @@ public class FactRec {
         if (n == 0 || n == 1) {
             return 1;
         } else {
-            return calc(n - 1) * n;
+            return n * calc(n - 1);
         }
     }
 
     public static void main(String[] args) {
-        int rsl = calc(2);
-        System.out.println(rsl);
-        System.out.println(calc(1));
+        System.out.println(calc(3));
     }
 }

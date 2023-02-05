@@ -1,5 +1,6 @@
 package ru.job4j.queue;
 
+import java.io.Serializable;
 import java.util.Deque;
 
 public class ReconstructPhrase {
@@ -16,12 +17,8 @@ public class ReconstructPhrase {
         StringBuilder str = new StringBuilder();
         int size = evenElements.size();
         for (int i = 0; i < size; i++) {
-            if (i % 2 == 0) {
-                str.append(evenElements.peek());
-                evenElements.poll();
-            } else {
-                evenElements.poll();
-            }
+            Serializable serializable = i % 2 == 0 ? str.append(evenElements.pollFirst())
+                    : evenElements.pollFirst();
         }
         return str.toString();
     }
@@ -30,8 +27,7 @@ public class ReconstructPhrase {
         StringBuilder str = new StringBuilder();
         int size = descendingElements.size();
         for (int i = 0; i < size; i++) {
-            str.append(descendingElements.peekLast());
-            descendingElements.pollLast();
+            str.append(descendingElements.pollLast());
         }
         return str.toString();
     }

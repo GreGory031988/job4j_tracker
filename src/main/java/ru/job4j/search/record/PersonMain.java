@@ -1,4 +1,4 @@
-package ru.job4j.record;
+package ru.job4j.search.record;
 
 public class PersonMain {
     public static void main(String[] args) {

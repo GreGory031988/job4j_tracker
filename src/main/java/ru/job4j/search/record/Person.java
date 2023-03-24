@@ -1,4 +1,4 @@
-package ru.job4j.record;
+package ru.job4j.search.record;
 import java.util.Objects;
 
 public class Person {

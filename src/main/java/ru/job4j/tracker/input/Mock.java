@@ -1,11 +1,11 @@
-package ru.job4j.tracker;
+package ru.job4j.tracker.input;
 
-public class StubInput implements Input {
+public class Mock implements Input {
 
-    private String[] answers;
+    private final String[] answers;
     private int position = 0;
 
-    public StubInput(String[] answers) {
+    public Mock(String[] answers) {
         this.answers = answers;
     }
 

@@ -1,6 +1,6 @@
-package ru.job4j.tracker;
+package ru.job4j.tracker.output;
 
-public class ConsoleOutput implements Output {
+public class ConsoleOut implements Output {
 
     @Override
     public void println(Object obj) {

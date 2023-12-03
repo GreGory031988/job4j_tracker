@@ -1,23 +1,27 @@
-package ru.job4j.tracker;
+package ru.job4j.tracker.action;
+
+import ru.job4j.tracker.*;
+import ru.job4j.tracker.input.Input;
+import ru.job4j.tracker.output.Output;
 
 import java.util.List;
 
-public class FindNameAction implements UserAction {
+public class FindName implements UserAction {
     private final Output out;
 
-    public FindNameAction(Output out) {
+    public FindName(Output out) {
         this.out = out;
     }
 
     @Override
     public String name() {
-        return "Find items by name";
+        return "Показать заявку по имени";
     }
 
     @Override
     public boolean execute(Input input, Tracker tracker) {
-        out.println("=== Find items by name ===");
-        String name = input.askStr("Enter name: ");
+        out.println("=== Показать заявку по имени ===");
+        String name = input.askStr("Введите имя: ");
         List<Item> items = tracker.findByName(name);
         if (items.size() > 0) {
             for (Item item : items) {
